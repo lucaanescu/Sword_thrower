@@ -4403,31 +4403,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1003614436 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6768984541850301156, guid: b797ad3be29188840832c9e0792a6be3, type: 3}
-  m_PrefabInstance: {fileID: 6768984542751031808}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1003614442
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1003614436}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e8dbdeb57355cb343b0f18718b20f2f8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1050105652
 GameObject:
   m_ObjectHideFlags: 0
@@ -4739,6 +4714,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton
       objectReference: {fileID: 0}
+    - target: {fileID: 6768984541850301157, guid: b797ad3be29188840832c9e0792a6be3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -944942176, guid: 7a057f7ad27924a4b9dea8b9171ee998, type: 3}
     - target: {fileID: 6768984541850301160, guid: b797ad3be29188840832c9e0792a6be3, type: 3}
       propertyPath: m_RootOrder
       value: 4

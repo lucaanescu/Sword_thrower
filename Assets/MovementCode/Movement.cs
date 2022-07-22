@@ -28,7 +28,7 @@ public class Movement : MonoBehaviour
     void Update()
     {
         moveHorizontal = Input.GetAxisRaw("Horizontal");
-        moveVertical = Input.GetAxisRaw("Vertical");
+        moveVertical = Input.GetAxisRaw("Jump");
 
         Animator.SetFloat("Speed", Mathf.Abs(moveHorizontal  * walk));
 

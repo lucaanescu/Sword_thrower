@@ -7,24 +7,41 @@ public class SwordScript : MonoBehaviour
 
     private Rigidbody2D swordB;
     Movement player;
+    private Transform target;
 
     Transform firepoint;
     float firepower = 1f;
+    float returnpower = 10f;
+    float rotateSpeed = 50f;
 
     void Awake()
     {
         swordB = gameObject.GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>();
+        target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Update()
     {
         if(Input.GetButtonDown("Fire1"))
         {
-            swordB.AddForce(transform.right * 40f, ForceMode2D.Impulse);
+            swordB.AddForce(transform.right * 20f, ForceMode2D.Impulse);
         }
 
         if(Input.GetButtonDown("Fire2"))
+        {
+            Vector2 direction = (Vector2)target.position - swordB.position;
+
+            direction.Normalize();
+
+            float rotateAmmount = Vector3.Cross(direction, transform.up).z;
+
+            swordB.angularVelocity = -rotateAmmount * rotateSpeed;
+
+            swordB.velocity = transform.up * returnpower;
+        }
+
+        if(Input.GetButtonDown("Retrieve"))
         {
             Destroy(this.gameObject);
             player.ammo = 1;
