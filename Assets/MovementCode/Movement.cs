@@ -37,6 +37,16 @@ public class Movement : MonoBehaviour
             //the rest of the shooting code is in SwordScript
             Instantiate(Sword, firepoint.position, firepoint.rotation);
             ammo -= ammo;
+
+        if(moveHorizontal > 0)
+        {
+            gameObject.transform.localScale = new Vector3(1f,0.45f,1);
+        }
+
+        if(moveHorizontal < 0)
+        {
+            gameObject.transform.localScale = new Vector3(-1f,0.45f,1);
+        }
         }
     }
 

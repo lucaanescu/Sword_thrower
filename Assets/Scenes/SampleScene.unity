@@ -4487,6 +4487,11 @@ Transform:
   m_Father: {fileID: 519420032}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1683204948 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2006135771, guid: 68603fe7c26373040bad8ba209799654, type: 3}
+  m_PrefabInstance: {fileID: 6296486814487225820}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1886308980
 GameObject:
   m_ObjectHideFlags: 3
@@ -4657,10 +4662,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: redicle
       objectReference: {fileID: 0}
-    - target: {fileID: 1913982434669141085, guid: 134b5f1cac276b4428fe20eddecb1452, type: 3}
-      propertyPath: m_TagString
-      value: Redicle
-      objectReference: {fileID: 0}
     - target: {fileID: 1913982434669141087, guid: 134b5f1cac276b4428fe20eddecb1452, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -4705,6 +4706,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3525349702755676141, guid: 134b5f1cac276b4428fe20eddecb1452, type: 3}
+      propertyPath: shotPoint
+      value: 
+      objectReference: {fileID: 1683204948}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 134b5f1cac276b4428fe20eddecb1452, type: 3}
 --- !u!1001 &6296486814487225820
