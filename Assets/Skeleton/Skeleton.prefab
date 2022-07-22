@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396711306426548932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.187, y: -0.244, z: 0}
+  m_LocalPosition: {x: 0.145, y: -0.156, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 6768984541850301160}
   - component: {fileID: 6768984541850301158}
   - component: {fileID: 6768984541850301157}
-  - component: {fileID: 2862250669338373330}
   - component: {fileID: 1003614442}
   - component: {fileID: 3102659298169286146}
   - component: {fileID: 8002128051857685590}
@@ -143,22 +142,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &2862250669338373330
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6768984541850301156}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.023579419, y: 0.017327532}
-  m_Size: {x: 0.13479984, y: 0.14386877}
-  m_Direction: 0
 --- !u!95 &1003614442
 Animator:
   serializedVersion: 4
@@ -218,7 +201,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  distance: 0
   grounded: {fileID: 450683601800453367}
 --- !u!61 &1003614445
 BoxCollider2D:
@@ -230,7 +212,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.038996577, y: 0.0054413974}

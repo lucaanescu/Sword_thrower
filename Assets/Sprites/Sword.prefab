@@ -96,10 +96,10 @@ GameObject:
   - component: {fileID: 1033039921773664321}
   - component: {fileID: 1033039921773664320}
   - component: {fileID: 1033039921773664323}
-  - component: {fileID: 1033039921773664322}
   - component: {fileID: 541227566}
   - component: {fileID: 541227565}
   - component: {fileID: -6415160750233468890}
+  - component: {fileID: 2763049094736910028}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -228,22 +228,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1348165, y: 1.1317954}
   m_EdgeRadius: 0
---- !u!58 &1033039921773664322
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033039921773664333}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.107291766, y: 0.11757701}
-  serializedVersion: 2
-  m_Radius: 2.5517137
 --- !u!50 &541227566
 Rigidbody2D:
   serializedVersion: 4
@@ -303,6 +287,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85c771b9f66838446a3588a23c93f279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &2763049094736910028
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033039921773664333}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.3, y: 1.3}
+  serializedVersion: 2
+  m_Radius: 1.3
 --- !u!1 &5564508685939831208
 GameObject:
   m_ObjectHideFlags: 0

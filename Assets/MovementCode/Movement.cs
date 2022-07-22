@@ -38,15 +38,15 @@ public class Movement : MonoBehaviour
             Instantiate(Sword, firepoint.position, firepoint.rotation);
             ammo -= ammo;
 
-        if(moveHorizontal > 0)
-        {
-            gameObject.transform.localScale = new Vector3(1f,0.45f,1);
-        }
+            if(moveHorizontal > 0)
+            {
+                gameObject.transform.localScale = new Vector3(1f,0.45f,1);
+            }
 
-        if(moveHorizontal < 0)
-        {
-            gameObject.transform.localScale = new Vector3(-1f,0.45f,1);
-        }
+            if(moveHorizontal < 0)
+            {
+                gameObject.transform.localScale = new Vector3(-1f,0.45f,1);
+            }
         }
     }
 

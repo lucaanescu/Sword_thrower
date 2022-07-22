@@ -32,7 +32,6 @@ public class SwordScript : MonoBehaviour
     {
 
         Vector2 direction = (Vector2)targetPos.position - swordB.position;
-        Vector2 direction2 = (Vector2)playerloc.position - swordB.position;
         float rotate = Vector3.Cross(direction, transform.right).z;
 
         swordB.angularVelocity = -rotate * rotateSpeed;

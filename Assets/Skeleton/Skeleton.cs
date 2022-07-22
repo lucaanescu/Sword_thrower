@@ -5,11 +5,15 @@ using UnityEngine;
 public class Skeleton : MonoBehaviour
 {
     public float speed = 2f;
-    public float distance;
+    private float distance = 15f;
+
+    bool noplayer = true;
 
     private bool movingRight = true;
 
     public Transform grounded;
+
+    private Rigidbody2D skelly;
 
     void Awake()
     {
@@ -22,15 +26,19 @@ public class Skeleton : MonoBehaviour
 
         RaycastHit2D groundInfo = Physics2D.Raycast(grounded.position, Vector2.down, distance);
 
-        if(groundInfo.collider == false){
-            if(movingRight == true){
-                transform.eulerAngles = new Vector3(0, -180, 0);
-                movingRight = false;
-            }
-            else{
-                transform.eulerAngles = new Vector3(0,0,0);
-                movingRight = true;
-            }
+        if(groundInfo.collider == false)
+        {
+           if(movingRight == true)
+           {
+               transform.eulerAngles = new Vector2(0, -180);
+               movingRight = false;
+           }
+           else
+           {
+               transform.eulerAngles = new Vector2(0,0);
+               movingRight = true;
+           }
         }
     }
+
 }
