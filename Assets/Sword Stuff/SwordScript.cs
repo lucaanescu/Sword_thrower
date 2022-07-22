@@ -7,7 +7,7 @@ public class SwordScript : MonoBehaviour
 
     private Rigidbody2D swordB;
     Movement player;
-    private Transform target;
+    public Transform target;
 
     Transform firepoint;
     float firepower = 1f;
@@ -25,20 +25,20 @@ public class SwordScript : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1"))
         {
-            swordB.AddForce(transform.right * 20f, ForceMode2D.Impulse);
+            swordB.AddForce(transform.right * 10f, ForceMode2D.Impulse);
+            swordB.AddForce(-transform.up * 5f, ForceMode2D.Impulse);
         }
 
         if(Input.GetButtonDown("Fire2"))
         {
             Vector2 direction = (Vector2)target.position - swordB.position;
 
-            direction.Normalize();
-
-            float rotateAmmount = Vector3.Cross(direction, transform.up).z;
+            float rotateAmmount = Vector3.Cross(direction, direction).z;
 
             swordB.angularVelocity = -rotateAmmount * rotateSpeed;
 
-            swordB.velocity = transform.up * returnpower;
+            swordB.velocity = transform.right * returnpower;
+            swordB.velocity = -transform.up * returnpower;
         }
 
         if(Input.GetButtonDown("Retrieve"))
