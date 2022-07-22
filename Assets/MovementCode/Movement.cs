@@ -34,9 +34,9 @@ public class Movement : MonoBehaviour
 
         if(Input.GetButtonDown("Fire1") && ammo > 0)
         {
+            //the rest of the shooting code is in SwordScript
             Instantiate(Sword, firepoint.position, firepoint.rotation);
             ammo -= ammo;
-            Debug.Log("I fired my sword");
         }
     }
 
