@@ -45,7 +45,7 @@ public class SwordScript : MonoBehaviour
 
         if(Input.GetButtonDown("Fire2"))
         {
-            swordB.velocity = transform.right * firepower;
+            swordB.velocity = -transform.right * firepower;
         }
 
         if(Input.GetButtonDown("Retrieve"))
