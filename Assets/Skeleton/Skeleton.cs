@@ -7,12 +7,21 @@ public class Skeleton : MonoBehaviour
     public float speed = 2f;
     private float distance = 15f;
 
-    bool noplayer = true;
+    //view angles for 
+    public float viewRadius;
+    public float viewAngle;
+    public Vector3 DirFromAngle(float angleInDegrees)
+    {
+        return new Vector3(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad),Mathf.Cos(angleInDegrees * Mathf.Deg2Rad),0);
+    }
 
+    //is the ai moving or not
     private bool movingRight = true;
 
+    //checks ground position
     public Transform grounded;
 
+    //skeletons riggid body
     private Rigidbody2D skelly;
 
     void Awake()
