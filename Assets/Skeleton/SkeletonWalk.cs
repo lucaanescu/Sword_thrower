@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SkeletonWalk : MonoBehaviour
 {
-    private float walkSpeed = 200, range;
+    private float walkSpeed = 200;
+    public float range, distToPlayer;
 
     public bool mustTurn;
     public bool mustPatrol;
