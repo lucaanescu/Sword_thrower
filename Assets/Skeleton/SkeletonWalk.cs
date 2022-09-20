@@ -26,6 +26,20 @@ public class SkeletonWalk : MonoBehaviour
         {
             Patrol();
         }
+
+        distToPlayer = Vector2.Distance(transform.position, player.position);
+
+        if(distToPlayer <= range)
+        {
+            if(player.positon.x > transform.positon.x && transform.localScale.x < 0
+                || player.position.x < transform.position.x && transform.localScale.x > 0)
+            {
+                Flip();
+            }
+
+            mustPatrol = false;
+            Attack();
+        }
     }
 
     void FixedUpdate()
@@ -52,5 +66,10 @@ public class SkeletonWalk : MonoBehaviour
         transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
         walkSpeed *= -1;
         mustPatrol = true;
+    }
+
+    void Attack()
+    {
+
     }
 }
