@@ -196,8 +196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59592a027f38a204b99a96bc0f0fc666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 50
-  distToPlayer: 0
   mustTurn: 0
   mustPatrol: 0
   rb: {fileID: 2258050712007277645}

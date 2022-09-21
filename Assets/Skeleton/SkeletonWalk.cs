@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SkeletonWalk : MonoBehaviour
 {
-    private float walkSpeed = 200;
-    public float range, distToPlayer;
+    private float walkSpeed = 200, range = 10;
+    private float distToPlayer;
 
     public bool mustTurn;
     public bool mustPatrol;
@@ -31,13 +31,14 @@ public class SkeletonWalk : MonoBehaviour
 
         if(distToPlayer <= range)
         {
-            if(player.positon.x > transform.positon.x && transform.localScale.x < 0
+            if(player.position.x > transform.position.x && transform.localScale.x < 0
                 || player.position.x < transform.position.x && transform.localScale.x > 0)
             {
                 Flip();
             }
 
             mustPatrol = false;
+            rb.velocity = Vector2.zero;
             Attack();
         }
     }
