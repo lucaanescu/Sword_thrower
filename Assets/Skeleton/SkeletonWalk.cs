@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SkeletonWalk : MonoBehaviour
 {
-    private float walkSpeed = 200, range = 10;
+    private float walkSpeed = 200, range = 10, TimeBetweenAttacks = 10;
     private float distToPlayer;
 
     public bool mustTurn;
@@ -69,8 +69,8 @@ public class SkeletonWalk : MonoBehaviour
         mustPatrol = true;
     }
 
-    void Attack()
+    IEnumerator Attack()
     {
-
+        yeild return new WaitForSeconds(TimeBetweenAttacks);
     }
 }
