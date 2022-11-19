@@ -39,7 +39,7 @@ public class SkeletonWalk : MonoBehaviour
 
             mustPatrol = false;
             rb.velocity = Vector2.zero;
-            Attack();
+            StartCoroutine(Shoot());
         }
     }
 
@@ -71,6 +71,6 @@ public class SkeletonWalk : MonoBehaviour
 
     IEnumerator Attack()
     {
-        yeild return new WaitForSeconds(TimeBetweenAttacks);
+        
     }
 }
