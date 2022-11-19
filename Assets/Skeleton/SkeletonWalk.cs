@@ -39,7 +39,6 @@ public class SkeletonWalk : MonoBehaviour
 
             mustPatrol = false;
             rb.velocity = Vector2.zero;
-            StartCoroutine(Shoot());
         }
     }
 
@@ -69,8 +68,4 @@ public class SkeletonWalk : MonoBehaviour
         mustPatrol = true;
     }
 
-    IEnumerator Attack()
-    {
-        
-    }
 }
