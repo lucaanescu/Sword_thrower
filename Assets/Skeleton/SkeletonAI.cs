@@ -13,11 +13,13 @@ public class SkeletonAI : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     private float cooldownTimer = Mathf.Infinity;
 
-    private Animator anim;
+    public PlayerHealth phealth = new PlayerHealth();
+
+    private Animator Skeleton;
 
     private void Awake()
     {
-        anim = GetComponent<Animator>();
+        Skeleton = GetComponent<Animator>();
     }
 
     void Update()
@@ -28,8 +30,9 @@ public class SkeletonAI : MonoBehaviour
         {
             if(cooldownTimer >= attackCooldown)
             {
+                print("I hit the player");
                 cooldownTimer = 0;
-                anim.SetTrigger("");
+                Skeleton.SetTrigger("Attack 0");
             }
         }
     }
@@ -39,6 +42,11 @@ public class SkeletonAI : MonoBehaviour
         RaycastHit2D hit = Physics2D.BoxCast(boxCol.bounds.center + transform.right * range * transform.localScale.x * colliderDistance, 
         new Vector3(boxCol.bounds.size.x * range, boxCol.bounds.size.y, boxCol.bounds.size.z),
         0, Vector2.left, 0, playerLayer);
+
+        if(hit.collider != null){
+            //phealth.playerHealth = hit.transform.GetComponent<PlayerHealth>();
+        }
+
         return hit.collider != null;
     }
 
@@ -49,4 +57,10 @@ public class SkeletonAI : MonoBehaviour
         new Vector3(boxCol.bounds.size.x * range, boxCol.bounds.size.y, boxCol.bounds.size.z));
     }
 
+    private void DamagePlayer()
+    {
+        if(PlayerInSight()){
+            //phealth.playerHealth.TakeDamage(damage);
+        }
+    }
 }

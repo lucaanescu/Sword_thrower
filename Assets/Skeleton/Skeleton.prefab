@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 2258050712007277642}
   - component: {fileID: 2258050712007277645}
   - component: {fileID: 2258050712007277644}
-  - component: {fileID: 2258050712007277647}
   - component: {fileID: 2258050712007277646}
   - component: {fileID: 2258050712007277632}
   - component: {fileID: 1422304559288805698}
   - component: {fileID: 2140962837675344329}
+  - component: {fileID: 7527066156568253445}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -112,26 +112,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &2258050712007277647
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2258050712007277634}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e8dbdeb57355cb343b0f18718b20f2f8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &2258050712007277646
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -222,14 +202,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999eedda854a04e45b1e500b87ac7a5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 1.09
-  range: 7.58
-  colliderDistance: 0
+  attackCooldown: 1.2
+  range: 4
+  colliderDistance: 0.03
   damage: 8
-  boxCol: {fileID: 0}
+  boxCol: {fileID: 2258050712007277632}
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!95 &7527066156568253445
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2258050712007277634}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e8dbdeb57355cb343b0f18718b20f2f8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2258050712842166159
 GameObject:
   m_ObjectHideFlags: 0
