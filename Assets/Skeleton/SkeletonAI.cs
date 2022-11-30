@@ -19,6 +19,7 @@ public class SkeletonAI : MonoBehaviour
 
     private void Awake()
     {
+        //phealth = GetComponent<PlayerHealth>().PlayerHealth;
         Skeleton = GetComponent<Animator>();
     }
 
